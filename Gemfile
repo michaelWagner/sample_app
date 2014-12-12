@@ -4,7 +4,6 @@ gem 'rails', '3.0.12'
 
 gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'will_paginate', '3.0.pre2'
-gem 'pg'
 
 group :development do
   gem 'sqlite3', '1.3.4'
@@ -18,9 +17,13 @@ group :test do
   gem 'webrat', '0.7.1'
   gem 'spork', '0.9.0.rc8'
   gem 'factory_girl_rails', '1.0'
-  gem 'rails_12factor', '0.0.2'
   # gem 'autotest', '4.4.6'
   # gem 'autotest-rails-pure', '4.1.2'
   # gem 'autotest-fsevent', '0.2.4'
   # gem 'autotest-growl', '0.2.9'
+end
+
+group :production do
+  gem 'rails_12factor', '0.0.2'
+  gem 'pg'
 end
