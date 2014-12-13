@@ -8,6 +8,10 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module SampleApp
   class Application < Rails::Application
+    # Hotfix for bug in rails 3.0.12
+    # http://stackoverflow.com/questions/16044008/no-implicit-conversion-of-nil-into-string
+    ActionController::Base.config.relative_url_root = ''
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
