@@ -8,7 +8,6 @@ SampleApp::Application.routes.draw do
 
   root :to => 'pages#home'
 
-  get "users/new"
   get "pages/home"
   get "pages/contact"
   get "pages/about"
